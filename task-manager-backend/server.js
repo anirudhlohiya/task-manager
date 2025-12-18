@@ -9,7 +9,10 @@ const taskRoutes = require('./routes/task');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  credentials: true
+}));
 app.use(express.json());
 
 // MongoDB Connection
